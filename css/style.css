@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.iphone-body {
+    position: absolute;
+    width: calc(100% - 60px);
+    top: 30px;
+    left: 30px;
+}
+
+.top_header {
+    margin: 25px 0;
+}
+
+.left-header-text h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    color: #2F4368;
+    width: 100%;
+}
+
+.right-header-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    background: #E3EDF7;
+    border-radius: 50%;
+    box-shadow: -5px -4px 8px 0px rgba(255, 255, 255, 0.80),
+        5px 4px 8px 0px rgba(88, 88, 88, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+.right-header-icon:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.right-header-icon i {
+    font-size: 20px;
+    color: #2F4368;
+    display: block;
+    margin: auto;
+}
+
+
+
+.analog-clock {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    background: #E3EDF7;
+    border-radius: 50%;
+    box-shadow: -5px -4px 8px 0px rgba(255, 255, 255, 0.80),
+        5px 4px 8px 0px rgba(88, 88, 88, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.analog-clock::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 15px;
+    background: #868686;
+    opacity: .5;
+}
+
+.analog-clock::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 15px;
+    background: #868686;
+    opacity: .5;
+}
+
+.analog-circle {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    background: #E3EDF7;
+    border-radius: 50%;
+    box-shadow: -5px -4px 8px 0px rgba(255, 255, 255, 0.60),
+        5px 4px 8px 0px rgba(88, 88, 88, 0.2);
+}
+
+.analog-circle::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 2px;
+    background: #868686;
+    opacity: .5;
+}
+
+.analog-circle::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 2px;
+    background: #868686;
+    opacity: .5;
+}
+
+
+.hours,
+.minutes,
+.seconds {
+    position: absolute;
+}
+
+.hours,
+.hr {
+    width: 100px;
+    height: 100px;
+}
+
+.minutes,
+.min {
+    width: 130px;
+    height: 130px;
+}
+
+.seconds,
+.sec {
+    width: 170px;
+    height: 170px;
+}
+
+.hr {
+    transform: rotateZ(90deg);
+}
+
+.min {
+    transform: rotateZ(255deg);
+}
+
+.hr,
+.min,
+.sec {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 58px;
+    background: #7F7F7E;
+    z-index: 10;
+    border-radius: 25px;
+}
+
+.min::before {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 75px;
+    background: #ff0;
+    z-index: 15;
+    border-radius: 25px;
+}
+
+.sec::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 98px;
+    background: #f00;
+    z-index: 20;
+    border-radius: 25px;
+}
+
+
+
+/*! Alarm Style */
+.alarm {
+    margin: 40px 0;
+}
+
+.alarm-1,
+.alarm-2 {
+    width: 100%;
+    height: 50px;
+    background: #E3EDF7;
+    border-radius: 10px;
+    box-shadow: -5px -4px 8px 0px rgba(255, 255, 255, 0.60),
+        5px 4px 8px 0px rgba(88, 88, 88, 0.2);
+    padding: 9px 12px;
+    margin-bottom: 20px;
+}
+
+.left-alarm,
+.right-alarm {
+    display: flex;
+    align-items: center;
+}
+
+.left-alarm span:nth-child(1) {
+    font-size: 18px;
+    color: #2F4368;
+    font-weight: 700;
+}
+
+.left-alarm span:nth-child(2) {
+    font-size: 14px;
+    color: #8796AF;
+    font-weight: 500;
+    margin-left: 3px;
+}
+
+
+
+/*?  Check Button Style */
+label {
+    position: relative;
+    cursor: pointer;
+}
+
+label input {
+    appearance: none;
+    display: none;
+}
+
+label span {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 32px;
+    background: #B9CEE2;
+    border-radius: 40px;
+    box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.2),
+        inset 0 2px 2px rgba(0, 0, 0, 0.2),
+        inset 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.alarm-2 label span {
+    background: #DEE8F2;
+}
+
+label .indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(to bottom, #31456A, #364d77);
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    transition: 0.5s;
+    transform: scale(0.9);
+}
+
+.alarm-2 label .indicator {
+    background: linear-gradient(to bottom, #E3EDF7, #B9CEE2);
+}
+
+label input:checked~.indicator {
+    left: 28px;
+}
+
+label .indicator::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5px;
+    height: 5px;
+    background: #f00;
+    border-radius: 50%;
+    transition: 0.5s;
+    box-shadow: 0 0 2px #f00,
+        0 0 5px #f00,
+        0 0 10px #f00,
+        0 0 15px #f00,
+        0 0 20px #f00,
+        0 0 25px #f00,
+        0 0 30px #f00,
+        0 0 40px #f00;
+}
+
+label input:checked~.indicator::before {
+    background: #0f0;
+    box-shadow: 0 0 2px #0f0,
+        0 0 5px #0f0,
+        0 0 10px #0f0,
+        0 0 15px #0f0,
+        0 0 20px #0f0,
+        0 0 25px #0f0,
+        0 0 30px #0f0,
+        0 0 40px #0f0;
+}
+
+
+.list-item {
+    width: 50px;
+    height: 50px;
+    background: #E3EDF7;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 14px;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.list-item:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+        0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+        0px 12px 10px -10px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.01);
+}
+
+.list-item:hover i {
+    color: #8CA9CC;
+}
+
+.list-item i {
+    font-size: 18px;
+    color: #23acc4;
+}
